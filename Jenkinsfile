@@ -7,5 +7,19 @@ pipeline {
                 sh 'node --version'
             }
         }
+        stage('Startup') {
+            steps {
+                script {
+                    sh 'npm install'
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+            script {
+                    sh 'npm run test'
+                }
+            }
+        }
     }
 }

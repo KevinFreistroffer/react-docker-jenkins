@@ -1,12 +1,11 @@
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'node:16.17.1-alpine' } }
+    // agent { docker { image 'node:16.17.1-alpine' } }
+    tools {
+        nodejs 'default-nodejs'
+    }
     stages {
-        stage('build') {
-            steps {
-                sh 'node --version'
-            }
-        }
+  
         stage('Startup') {
             steps {
                 script {
@@ -14,9 +13,14 @@ pipeline {
                 }
             }
         }
+        stage('build') {
+            steps {
+                sh 'node --version'
+            }
+        }
         stage('Test') {
             steps {
-            script {
+                script {
                     sh 'npm run test'
                 }
             }

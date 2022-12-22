@@ -6,19 +6,19 @@ pipeline {
         stage('Startup') {
             steps {
                 script {
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
         stage('build') {
             steps {
-                sh 'node --version'
+                bat 'node --version'
             }
         }
         stage('Test') {
             steps {
                 script {
-                    sh 'npm run test'
+                    bat 'npm run test'
                 }
             }
         }

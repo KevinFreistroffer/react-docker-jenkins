@@ -1,9 +1,6 @@
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    // agent { docker { image 'node:16.17.1-alpine' } }
-//     tools {
-//         nodejs 'default-nodejs'
-//     }
+    agent any
     stages {
   
         stage('Startup') {

@@ -36,6 +36,11 @@
     ]
   },
   "jest": {
-    "testMatch": [ "**/*.test.tsx" ]
+    "verbose": true,
+    "testURL": "http://localhost/",
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "testMatch": ["**/__tests__/*.js?(x)"]
   }
 }

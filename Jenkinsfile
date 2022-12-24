@@ -24,9 +24,9 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                bat './scripts/deliver.sh'
+                bat './jenkins/scripts/deliver.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                bat './scripts/kill.sh'
+                bat './jenkins/scripts/kill.sh'
             }
         }
     }

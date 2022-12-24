@@ -22,5 +22,12 @@ pipeline {
                 }
             }
         }
+        stage('Deliver') {
+            steps {
+                bash './scripts/deliver.sh'
+                input message: 'Finished using the web site? (Click "Proceed" to continue)'
+                bash './scripts/kill.sh'
+            }
+        }
     }
 }

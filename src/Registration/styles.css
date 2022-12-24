@@ -1,0 +1,64 @@
+#registration header,
+#registration main,
+#registration footer {
+  width: 768px;
+  max-width: 768px;
+  margin: 0 auto;
+}
+#registration h2 {
+  font-size: 3rem;
+}
+#registration main {
+  text-align: left;
+}
+#registration main form {
+  margin-top: 2rem;
+}
+#registration main form .form-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: .5rem 0;
+}
+#registration main form .form-input label {
+  margin-bottom: .25rem;
+}
+#registration main form .form-input input {
+  height: 2rem;
+  padding: .5rem;
+}
+#registration form .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+#registration form .buttons button {
+  width: 45%;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 0;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+
+#registration form .buttons button:first-child {
+  background-color: black;
+  color: white;
+}
+
+#registration form .buttons button:first-child:hover {
+  background-color: rgb(50,50,50);
+}
+
+#registration form .buttons button:last-child {
+  background-color: #61dafb;
+}
+
+#registration form .buttons button:last-child:hover {
+  background-color: #5bceee;
+}
+#registration footer {
+  height: 5rem;
+}

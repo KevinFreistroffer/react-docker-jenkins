@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-query": "^3.39.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -15,13 +16,18 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"**/*.js\""
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
-    ]
+      "react-app/jest",
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "pretter"
+    ],
+    "parser": "babel-eslint"
   },
   "browserslist": {
     "production": [
@@ -39,6 +45,21 @@
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
     },
-    "testMatch": ["**/__tests__/*.js?(x)"]
+    "testMatch": [
+      "**/__tests__/*.js?(x)"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.31.11",
+    "prettier": "2.8.1"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
   }
 }

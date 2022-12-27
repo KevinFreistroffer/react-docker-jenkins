@@ -5,4 +5,4 @@ module.exports = {
     '<rootDir>/src/**/*.test.js',
     '*.test.js',
   ],
-}
+};
